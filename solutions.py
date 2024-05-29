@@ -12,6 +12,12 @@ def calculate_profit():
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
     """
 
+    sales = int(input('Enter projected amount of total sales'))
+    formatted_sales = format(sales * .23, ',.2f')
+    print('Profit: $' + formatted_sales)
+
+
+
 
 def calculate_quotient_and_remainder():
     """
@@ -22,6 +28,11 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
+    num_1 = int(input('Enter first number'))
+    num_2 = int(input('Enter second number'))
+    quotient = num_1 // num_2
+    remainder = num_1 % num_2
+    print(str(num_2) + ' goes into ' + str(num_1) + ' a total of ' + str(quotient) + ' times with a remainder of ' + str(remainder))
 
 
 def calculate_miles_per_gallon():
@@ -35,6 +46,13 @@ def calculate_miles_per_gallon():
       Gas used (gallons): 25
       Miles per gallon: 2.2
     """
+    miles = int(input('How many miles driven'))
+    gas = int(input('How many gallons of gas used'))
+    mpg = miles / gas 
+    print('Miles driven: ' + str(miles))
+    print('Gas used (gallons): ' + str(gas))
+    print('Miles per gallon: ' + str(mpg))
+
 
 
 def align_text():
@@ -51,5 +69,25 @@ def align_text():
 
       Price #1: $    1.55
       Price #2: $   10.00
-      Price #3: $ 9532.60
+      Price #3: $ 9532.60 
     """
+
+    price_1 = int(input('Enter Price #1'))
+    price_2 = int(input('Enter Price #2'))
+    price_3 = int(input('Enter Price #3'))
+
+    formatted_price_1a = format(price_1, '.2f')
+    formatted_price_2a = format(price_2, '.2f')
+    formatted_price_3a = format(price_3, '.2f')
+
+    formatted_price_1b = format(formatted_price_1a, '>8s')
+    formatted_price_2b = format(formatted_price_2a, '>8s')
+    formatted_price_3b = format(formatted_price_3a, '>8s')
+
+    print('Here are your prices!')
+
+    print('Price #1: $' + formatted_price_1b)
+    print('Price #2: $' + formatted_price_2b)
+    print('Price #3: $' + formatted_price_3b)
+
+                  
